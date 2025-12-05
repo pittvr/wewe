@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Single Blog Post View</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#35511f",
+              "background-light": "#f7f8f6",
+              "background-dark": "#181e14",
+              "brand-green": "#344F1F",
+              "brand-off-white": "#F5F5F0",
+            },
+            fontFamily: {
+              "display": ["Newsreader", "serif"],
+              "sans": ["Work Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-brand-off-white dark:bg-background-dark text-[#333333] dark:text-gray-300">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 sm:px-10 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="sticky top-0 z-10 font-sans flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-300/50 dark:border-gray-700 bg-brand-off-white/80 dark:bg-background-dark/80 backdrop-blur-sm px-4 sm:px-10 py-4">
+<div class="flex items-center gap-4 text-brand-green dark:text-background-light">
+<div class="size-6">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_543)">
+<path d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z" fill="currentColor"></path>
+<path clip-rule="evenodd" d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z" fill="currentColor" fill-rule="evenodd"></path>
+</g>
+<defs>
+<clipPath id="clip0_6_543"><rect fill="white" height="48" width="48"></rect></clipPath>
+</defs>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">Piter Vidya</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-brand-green dark:text-background-light text-sm font-medium" href="../homepage/code.html">Work</a>
+<a class="text-brand-green dark:text-background-light text-sm font-medium" href="../about_me_page/code.html">About</a>
+<a class="text-brand-green dark:text-background-light text-sm font-medium" href="../blog_page/code.html">Blog</a>
+</div>
+</div>
+</header>
+<main class="font-display flex flex-col gap-8 pt-12 pb-16">
+<div class="flex flex-col gap-4 px-4">
+<h1 class="text-brand-green dark:text-background-light text-4xl lg:text-5xl font-bold leading-tight tracking-tight">My Creative Process: From Sketch to Final Piece</h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal">By Piter Vidya | Published on August 15, 2024 | 8 min read</p>
+</div>
+<div class="px-4">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-white rounded-lg min-h-80 lg:min-h-[420px]" data-alt="A beautifully lit artist's studio with a large canvas on an easel, surrounded by paints, brushes, and sketches." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB9NQmGrTdGA4je8Eb4OfPhRw3QRLkgXqhhAfgdU4zIx-XX0qvNSGbirOZV2E9to0LK2oq0eGVS1emYvjrQCFbjubW6WTWH7ZDAV2957XYGvKTWGjVz3cCITVtymlwZzbEbXzp6GU40ynhRUsaiLwBRrxVIL1rixM_gPV5NzYhNBV35eZzYcM3JddSkzHqwD7X1OWManALk0CDT1VXlpMqFGUzC3wR0BnbUBbHh5MbskZf-5YKsjYYM8UOmffb3Hzg4ZDAcGhBC6ZWF");'></div>
+</div>
+<article class="flex flex-col gap-6 px-4">
+<p class="text-lg leading-relaxed">
+                                Every piece of art begins with a spark—an idea, a fleeting image, a feeling. For me, the journey from that initial spark to a finished painting is a deeply personal and meditative process. It's a conversation between my hands, my materials, and the canvas. Today, I want to pull back the curtain and share a glimpse into how I bring my visions to life.
+                            </p>
+<p class="text-lg leading-relaxed">
+                                The process always starts in my sketchbook. It’s a sacred space, free from judgment, where I can explore compositions, test color palettes, and let my pencil wander. These initial sketches are often rough and chaotic, but they are the seeds from which the final artwork grows. I might fill pages with variations of a single idea until one just *feels* right.
+                            </p>
+<blockquote class="border-l-4 border-brand-green dark:border-primary pl-6 py-2 my-4 italic text-xl text-gray-600 dark:text-gray-400">
+                                "The sketchbook is a dialogue with myself, a place where the subconscious can speak freely."
+                            </blockquote>
+<p class="text-lg leading-relaxed">
+                                Once I have a solid composition, I move to the canvas. I typically start by laying down a thin wash of color to tone the surface, eliminating the stark white and setting the overall mood for the piece. From there, I build up layers of paint, working from broad shapes to finer details. This layering technique allows for a depth and luminosity that I find captivating. It’s a slow, deliberate dance of adding and subtracting, of patience and intuition. Each layer informs the next, and the painting evolves organically.
+                            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-4">
+<img alt="Close-up of a palette knife mixing thick oil paints in shades of blue, green, and white." class="rounded-lg object-cover w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYXyw2bX2Ywe3olgIyMsj58lx_sf_sYwWaknFTIOIthAEnRh-wsb4pbliice8ifJcoKJj2mfAmNdi_Q_J3SNPTPu5xH2so2aAV8ZytEHOL1c7ravDsp-ulMK0N9V0wtdtUfeAOhvyJ0Hs_QdrxbI_AUiACr2menIxWR5Z6z9aQiWt52UX_Ls0fQEJ0a0DR0LMp-6_KG3wj-U76o0p7Cd2pXkta81bfNgHCtC5JW51z9sFzM7LodHapl3RTsr7pW2FQcxYPzBjfwKZ_"/>
+<img alt="Detailed shot of brushstrokes on a canvas, showing texture and color blending." class="rounded-lg object-cover w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnSCCzhnRpXe732-T-awZOcw_6oh9BMKW1zSoSeMf1vX50ekt3vJAHdVpDt11C_g1zLy_o62pMNZz0040gT0CpOeAZdld8PPwG5zRiee90WAIuREqUhPSSczDHKr1JkVHBn59ibzgtvgfAO9BZSiXMQF6VRreutmEc9Pw2r9CMlCerCclNB1LhqvEBwneeVwTAQebXKNZVVtCEbFaHBm7AwonRh8wGIKslriBf8p_XZqlQXCIc1z3IRP5mwByIRTjo7tYDfXYNowz3"/>
+</div>
+<p class="text-lg leading-relaxed">
+                                The final stage is about refinement. I'll step back from the painting, sometimes for days, to see it with fresh eyes. This distance is crucial for identifying areas that need adjustment—a highlight here, a shadow there. It’s in these final touches that the piece truly comes alive and finds its voice. The journey is complete, and the story is ready to be shared.
+                            </p>
+</article>
+</main>
+<footer class="font-sans border-t border-solid border-gray-300/50 dark:border-gray-700 mt-12 py-8 text-center">
+<p class="text-sm text-gray-500 dark:text-gray-400">© 2025 Piter Vidya. All rights reserved.</p>
+<div class="flex justify-center gap-4 mt-4">
+<a class="text-gray-500 dark:text-gray-400 hover:text-brand-green dark:hover:text-primary" href="https://www.instagram.com/pittvr_/">Instagram</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-brand-green dark:hover:text-primary" href="https://www.behance.net/pitervidya30">Behance</a>
+<a class="text-gray-500 dark:text-gray-400 hover:text-brand-green dark:hover:text-primary" href="../contact_me_page/code.html">Contact</a>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>
